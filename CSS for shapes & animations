@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS reset ends and my CSS starts */
+
+* {
+   -moz-box-sizing:    border-box;  
+   -webkit-box-sizing: border-box;   
+    box-sizing:        border-box;  
+}
+
+
+/* Main section */
+.main{
+	background: yellow;
+	background-image: -webkit-linear-gradient(#9999FF, #66FF99);
+	background-image: -moz-linear-gradient(#9999FF, #66FF99);
+	background-image: -o-linear-gradient(#9999FF, #66FF99);
+	background-image: linear-gradient(#9999FF, #66FF99);
+	
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	
+	overflow: hidden;
+}
+
+.main ul {
+	text-align: center;
+}
+
+.main li {
+	display: inline-block;
+	margin: 282px 25px;
+}
+
+/* Shapes */
+
+#square:hover, #circle:hover, #parallelogram:hover{
+	background: #006666;
+	-webkit-transition-property: background;
+	   -moz-transition-property: background;
+	     -o-transition-property: background;
+	        transition-property: background;
+	
+	-webkit-transition-duration: 0.5s;
+	   -moz-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+}
+
+#triangle:hover{
+
+	border-bottom: 100px solid #006666;
+	
+	-webkit-transition-property: border-bottom;
+	   -moz-transition-property: border-bottom;
+	     -o-transition-property: border-bottom;
+	        transition-property: border-bottom;
+	
+	-webkit-transition-duration: 0.5s;
+	   -moz-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+}
+
+#square, #circle, #parallelogram {
+	background: #80FF80;
+}
+
+#square {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	
+	-webkit-animation: slideright 6s 1;
+	   -moz-animation: slideright 6s 1;
+		 -o-animation: slideright 6s 1;
+		    animation: slideright 6s 1;
+}
+
+#circle {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+
+	-webkit-animation: slidedown 6s 1;
+	-moz-animation: slidedown 6s 1;
+	-o-animation: slidedown 6s 1;
+	animation: slidedown 6s 1;
+}
+
+#triangle {
+	position: relative;
+	height: 0;
+	width: 0;
+	border-right: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-bottom: 100px solid #80FF80;
+	
+	-webkit-animation: slideup 6s 1;
+	   -moz-animation: slideup 6s 1;
+	     -o-animation: slideup 6s 1;
+	        animation: slideup 6s 1;
+}
+
+#parallelogram {
+	position: relative;
+	height: 100px;
+	width: 150px;
+	-webkit-transform: skew(20deg);
+	-moz-transform: skew(20deg);
+	-o-transform: skew(20deg);
+	transform: skew(20deg);
+	
+	-webkit-animation: slideleft 6s 1;
+	   -moz-animation: slideleft 6s 1;
+	     -o-animation: slideleft 6s 1;
+	        animation: slideleft 6s 1;
+}
+
+/* keyframes for animations */
+
+/* Slide Right */
+
+
+@-webkit-keyframes slideright{
+	from{
+		left: -1000px
+	}to{
+		left: 0;
+	}
+}
+
+@-moz-keyframes slideright{
+	from{
+		left: -1000px
+	}to{
+		left: 0;
+	}
+}
+
+@-o-keyframes slideright{
+	from{
+		left: -1000px
+	}to{
+		left: 0;
+	}
+}
+
+@keyframes slideright{
+	from{
+		left: -1000px
+	}to{
+		left: 0;
+	}
+}
+
+
+/* Slide Down */
+
+@-webkit-keyframes slidedown{
+	from{
+		top: -1000px;
+	}to{
+		top: 0;
+	}
+}
+
+@-moz-keyframes slidedown {
+	from{
+		top: -1000px;
+	}to{
+		top: 0;
+	}
+}
+
+@-o-keyframes slidedown {
+	from{
+		top: -1000px;
+	}to{
+		top: 0;
+	}
+}
+
+@keyframes slidedown {
+	from{
+		top: -1000px;
+	}to{
+		top: 0;
+	}
+}
+
+/* Slide Up */
+
+@-webkit-keyframes slideup {
+	from{
+		top: 1000px;
+	}to{
+		top: 0;
+	}
+}
+
+@-moz-keyframes slideup {
+	from{
+		top: 1000px;
+	}to{
+		top: 0;
+	}
+}
+
+@-o-keyframes slideup {
+	from{
+		top: 1000px;
+	}to{
+		top: 0;
+	}
+}
+
+@keyframes slideup {
+	from{
+		top: 1000px;
+	}to{
+		top: 0;
+	}
+}
+
+/* Slide Left */
+
+@-webkit-keyframes slideleft {
+	from{
+		right: -1000px
+	}to{
+		right: 0;
+	}
+}
+
+@-moz-keyframes slideleft {
+	from{
+		right: -1000px
+	}to{
+		right: 0;
+	}
+}
+
+@-o-keyframes slideleft {
+	from{
+		right: -1000px
+	}to{
+		right: 0;
+	}
+}
+
+@keyframes slideleft {
+	from{
+		right: -1000px
+	}to{
+		right: 0;
+	}
+}
